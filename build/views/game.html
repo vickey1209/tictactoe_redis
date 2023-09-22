@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIK TAC TOE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <div
+        class="bg d-flex flex-column align-items-center justify-content-center w-100 vh-100 bg-dark"
+      >
+      <h2 class="text-white" id="an_player" >_</h2> 
+
+      
+        <div class="game_box" id="game_box"> 
+          <div id="count" class="time_box">
+            <div class="buttons">
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn  m-btn mt-4"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                 id="playButton"
+              >
+                play
+              </button>
+    
+             
+            </div>
+          </div>   
+          <div class="">
+            <button class="game_buttons" id="a0" disabled><span>*</span></button>
+            <button class="game_buttons" id="a1" disabled><span>*</span></button>
+            <button class="game_buttons" id="a2" disabled><span>*</span></button>
+          </div>
+          <div class="">
+            <button class="game_buttons" id="b0" disabled><span>*</span></button>
+            <button class="game_buttons" id="b1" disabled><span>*</span></button>
+            <button class="game_buttons" id="b2" disabled><span>*</span></button>
+          </div>
+          <div class="">
+            <button class="game_buttons" id="c0" disabled><span>*</span></button>
+            <button class="game_buttons" id="c1" disabled><span>*</span></button>
+            <button class="game_buttons" id="c2" disabled><span>*</span></button>
+          </div>
+        </div>
+
+    <h2 class="text-white" id="player_name">_</h2>
+         <!-- Modal -->
+         <div
+         class="modal fade"
+         id="exampleModal"
+         tabindex="-1"
+         aria-labelledby="exampleModalLabel"
+         aria-hidden="true"
+       >
+         <div
+           class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+         >
+           <div class="modal-content">
+             <div class="modal-header">
+               <h1 class="modal-title fs-5" id="exampleModalLabel">
+                 Join Game
+               </h1>
+               <button
+                 type="button"
+                 class="btn-close"
+                 data-bs-dismiss="modal"
+                 aria-label="Close"
+               ></button>
+             </div>
+             <div class="modal-body">
+               <form >
+                 <div class="mb-3">
+                   <label for="user_name" class="form-label"
+                     >Your User Name</label
+                   >
+                   <input
+                     type="text"
+                     class="form-control"
+                     id="user_name"
+                     placeholder="Enter Your User Name"
+                     required
+                   />
+                 </div>  
+               
+             </div>
+             <div class="modal-footer">
+               <button
+                 type="button"
+                 class="btn btn-secondary"
+                 data-bs-dismiss="modal"
+               >
+                 Close
+               </button>
+               <button type="submit" class="btn btn-primary w-auto h-auto" 
+               data-bs-dismiss="modal">Play</button>
+             </form>
+             </div>
+           </div>
+         </div>
+       </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/custom.js"></script>
+    <script src="eventEmitter.js"></script>
+  </body>
+</html>
